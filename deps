@@ -67,14 +67,14 @@
     git=git://github.com/doctrine/mongodb-odm.git
 
 [DoctrineMongoDBBundle]
-    git=git://github.com/symfony/DoctrineMongoDBBundle.git
+    git=git://github.com/doctrine/DoctrineMongoDBBundle.git
     target=/bundles/Symfony/Bundle/DoctrineMongoDBBundle
 
 [doctrine-migrations]
     git=git://github.com/doctrine/migrations.git
 
 [DoctrineMigrationsBundle]
-    git=git://github.com/symfony/DoctrineMigrationsBundle.git
+    git=git://github.com/doctrine/DoctrineMigrationsBundle.git
     target=/bundles/Symfony/Bundle/DoctrineMigrationsBundle
 
 [doctrine-fixtures]
@@ -82,7 +82,7 @@
     target=doctrine-data-fixtures
 
 [DoctrineFixturesBundle]
-    git=git://github.com/symfony/DoctrineFixturesBundle.git
+    git=git://github.com/doctrine/DoctrineFixturesBundle.git
     target=/bundles/Symfony/Bundle/DoctrineFixturesBundle
 
 [Imagine]
