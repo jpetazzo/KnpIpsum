@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+import json
+import os
+env = json.load(open('/home/dotcloud/environment.json'))
+f = open('/home/dotcloud/symfony.yml','w')
+f.write('''
+doctrine:
+    dbal:
+        host:     {DOTCLOUD_MYSQL_MYSQL_HOST}
+        port:     {DOTCLOUD_MYSQL_MYSQL_PORT}
+        dbname:   mysql
+        user:     {DOTCLOUD_MYSQL_MYSQL_LOGIN}
+        password: {DOTCLOUD_MYSQL_MYSQL_PASSWORD}
+
+doctrine_mongodb:
+    connections:
+        default:
+            server: {DOTCLOUD_MONGODB_MONGODB_URL}
+    default_database: admin
+'''.format(**env))
+f.close()
+import os
+os.chdir('/home/dotcloud/code')
+os.system('php app/console doctrine:database:create && php app/console doctrine:schema:create')
+

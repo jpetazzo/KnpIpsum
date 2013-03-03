@@ -1,0 +1,8 @@
+www:
+  type: php
+  approot: web
+  postbuild: ~/code/postbuild
+mongodb:
+  type: mongodb
+mysql:
+  type: mysql
